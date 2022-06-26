@@ -1,0 +1,397 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {  /* small header */
+  width: 100%;
+  height: 140px;  
+ 
+ 
+}
+
+nav {
+  width: 20%;
+}
+
+* nav {  /*float everything inside nav */
+  float: left;
+}  
+        nav li {           /* make li's sit next to eachother */
+       display: inline-block;
+      }
+
+      .topHireUs {
+        margin-left: 20px; /* pushing hire us button to the right of classes (giving hire us a margin on its left side */
+      }
+
+header img {
+  
+   margin: 10px 30% 0px 30%;  /* this DOES keep the pokemon logo centered nicely!!! 0 auto strangely does not work however*/
+   padding-top: 3px;
+ 
+}
+
+header h3 {    /* donate button top right */
+  float: right;
+  margin-right: 30px;
+  font-weight: 400;
+
+}
+
+.whiteButton {
+  background-color: white;
+  border-radius: 2px;
+  padding: 6px;
+  color: rgb(54, 54, 93);
+  font-size: 1rem;
+
+}
+
+ /* grit section */
+.grit {width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+
+
+
+;}
+
+.big-background-image {
+  background-image: url("https://wallpaperaccess.com/full/3551099.jpg");
+  background-size: cover; 
+
+}
+
+ /* why section */
+ 
+ .why {
+  width: 100%;
+  height: auto;
+
+
+}
+
+ /* two things inside */
+
+.twoThingsInside {
+  width: 100%;
+  height: 600px;  
+
+ background-color: rgb(191, 191, 209);
+padding-top: 5%;
+padding-bottom: 5%;  
+background-image: url ("https://wallpaperaccess.com/full/3551099.jpg"); /* not working */
+background-size: cover; 
+display: flex;
+
+
+}
+
+    .sharingASection { /* name for both boxes which are sharing a bigger parent box */
+           
+      float: left;
+     
+      height: 400px;   
+      position: relative;
+      
+      flex: 1;
+      
+                
+    }
+            .gym p { /* name of left box name */
+             padding-bottom: 54px;
+             
+            }
+
+       .chancey {  /* right box name */
+         margin-left: 10px;
+         
+       }
+
+            .chancey p {
+              padding-bottom: 71px;
+            }
+     
+           .middle-IMGS {
+             width: 300px;
+             height: 200px;
+           }
+
+ /* volunteer */
+ 
+ .volunteer {
+  width: 100%;
+ height: auto;  
+margin-top: 5%;
+margin-bottom: 5%;
+}
+.volunteer p {
+ margin: 0 15%;  /* puts margins on the side of the paragraph,squeezing it in */
+ padding-bottom: 30px;  /*pushes volunteer button away from volunteer paragraph */
+}
+
+.borderButton {
+border: 2px solid black;
+padding: 10px 20px 10px 20px;
+font-size: 1rem;
+font-weight: 400;
+
+}
+
+footer {
+  width: 100%;
+  height: 300px;  
+  background-color: rgb(25, 25, 38);
+ }
+    footer span {
+      color: rgb(153, 150, 218) 
+    }
+
+    footer ul {  /* classes, hire us AND give, volunteer */
+      margin-left: -40px; /* since lis default to spacing to the left */
+           margin-top: -1px; /* gets rid of excessive default space between span and ul */
+    }
+      
+
+       footer li {
+         display: inline-block;
+      }
+
+      ul li:nth-last-child(1){
+        padding-left: 20px;  /* puts space between first and last li */
+ }
+
+ /* just for top left social media area */
+
+    footer .socialMedia {
+     float: left;   
+   
+   }
+        .socialMedia span { /* site map AND contribute */
+            display: inline-block; /* change from inline to inline-block so height can be set for span, so putting space back between span and ul after we removed it below */
+          height: 30px;
+         
+        }
+    
+    footer .location{
+      float: right;
+       
+    }
+    Footer .bottomSecFooter{
+      clear: both;
+    }
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.pokemon-center-logo { /* logo for header */
+  height: 45px
+}
+
+.pokemon-gym-logo2 {  /* logo for footer */
+  margin-bottom: -8px;
+  height: 30px;
+  position: absolute; /* turning this one makes it possible to use right */
+  right: 2%;
+}
+
+/**************************************
+/* text/font
+/************************************/
+* {
+  font-family: 'oswald',Arial, Helvetica, sans-serif
+}
+.html {
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.center-text  {
+  text-align: center;}
+
+.grit {
+  color: white;}
+
+
+  .grit h1 {
+    font-size: 3rem;
+  }
+
+  .grit p {
+    background-color: rgba(24, 25, 34, 0.5);
+   
+  }
+
+.why {
+
+  height: auto;
+  padding: 60px 25% 90px 25%; /* spacing around why container's elements*/ 
+  
+}
+
+      .why h2 {  /* FORMATING TEXT vertically aligning why containers 2 inner text elements https://blog.hubspot.com/website/center-text-in-css  */
+        
+        text-align: center; /* text align or auto 0 only works if width if declared for this element*/
+        width: 100%; 
+      
+      }
+      .why p {    
+        text-align: center;  
+        width: 100%;        
+      }
+
+.volunteer p {
+  font-weight: 400;
+}
+  
+footer {
+  color: white;
+  padding: 30px;
+  
+}
+    .footerImages {
+      height: 30px;
+      margin-bottom: 15px;
+      
+    }
+         .twitter{
+           padding: 0 10px 0 10px; /* space between icosn */
+         }
+
+  /* location right area */
+
+    .location {
+      width: 300px;
+      height: 150px;
+      text-align: left;
+ 
+    }
+       .location * {
+         display: block; /* makes the spans start on new lines */
+       }
+   .location h2 {
+          margin: 0; /* headings h1 to h6 have margin by default, so you need to reset it, setting: margin:0. */
+          font-size: 1rem;
+          font-weight: 400;
+    }
+ 
+    .locationSpace {
+      padding-bottom: 8px;
+    }
+   
+    .bottomSecFooter {
+      border-top: 2px solid grey;
+      padding-top: 10px;
+    }
+
+    /*              MEDIA                   */
+
+    @media screen and (max-width: 1200px){
+     
+      nav {
+        width: 50%;
+        margin-left: 40px; /*put some space here to make room for when the "donate" button moves to the far left */
+          }
+   
+
+      header img {
+      float: left;
+      position: absolute;
+      left: 1;
+      }
+
+      header h3 {    /* donate button top left */
+        
+        position: absolute; /* moved this all the way to the left */
+        left: 0;
+      
+      }
+
+      .why {
+        
+        max-height: 480px;
+        padding: 0% 5% 0% 5%;/* spacing around why container's elements*/ 
+        
+  
+        }
+
+      
+
+       section.twoThingsInside {
+        width: 100%;
+        height: 1000px;  
+         display: block;
+      }
+           .sharingASection {
+            left: 0%;
+            width: 100%;
+            display: block;
+            flex: none;         
+          float: none;
+          position: static;
+          height: auto;
+      
+
+
+           }
+
+
+           .gym {   /* visit the gym, adding space after classes button */
+             margin-bottom: 50px;
+           }
+
+
+           .chancey .borderButton{ /* moving have us visit you button up */
+             position: relative;
+             top: -30px; 
+             
+           }
+     .volunteer {
+       height: 300px;       
+     }
+
+     .volunteer p {
+      margin: 0%;
+      height: auto;
+      
+     }
+     .location {
+       width: 200px; /* needed to make width smaller so it fits, since text is aligned left, this removed some space on the right */
+
+     }
+
+   
+  
+}
+    
